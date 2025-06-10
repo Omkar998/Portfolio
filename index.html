@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omkar Aurangabadkar | Data Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-padding-top: 100px;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+      padding-top: 80px;
+    }
+    .gradient-text {
+      background: linear-gradient(to right, #6366f1, #9333ea);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glass-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .hero-bg {
+      background: #3b3140;
+      background: linear-gradient(135deg, #3b3140 0%, #4e4166 100%);
+    }
+    .img-border {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .nav-link {
+      transition: color 0.2s, border-bottom 0.2s;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: #6366f1;
+      border-bottom: 2px solid #6366f1;
+    }
+    .navbar-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Typewriter Animation Styles */
+    .typewriter-container {
+      min-height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .typewriter-text {
+      font-weight: 800;
+      background: linear-gradient(to right, #6366f1, #9333ea);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .cursor {
+      display: inline-block;
+      background: #6366f1;
+      width: 3px;
+      height: 1.2em;
+      margin-left: 2px;
+      animation: blink 1s infinite;
+    }
+    
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+    
+    /* Responsive text sizes for typewriter */
+    @media (min-width: 640px) {
+      .typewriter-container {
+        min-height: 3.5rem;
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .typewriter-container {
+        min-height: 4rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  
+  <!-- Header -->
+  <header class="navbar-fixed">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4" aria-label="Main navigation">
+      <h1 class="text-2xl font-extrabold gradient-text whitespace-nowrap">Omkar Aurangabadkar's Portfolio</h1>
+      <ul class="flex flex-wrap gap-3 justify-center text-base font-medium">
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li>
+          <a href="Omkar_Aurangabadkar_New_1.pdf" download class="bg-green-600 text-white px-4 py-2 rounded-lg shadow hover:bg-green-700 transition-all whitespace-nowrap">
+            Download Resume
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="pt-20 py-16 sm:py-20 md:py-24 text-center hero-bg text-white">
+    <div class="max-w-3xl mx-auto px-6 flex flex-col items-center">
+      <!-- Profile Image -->
+      <img src="profile.jpg" alt="Omkar Aurangabadkar"
+           class="w-48 sm:w-64 md:w-80 h-48 sm:h-64 md:h-80 mx-auto rounded-lg border-4 border-gray-800 object-cover img-border mb-8 hover:scale-[1.02] transition-transform duration-300"
+           data-aos="zoom-in" />
+      
+      <!-- Animated Typewriter Text -->
+      <div class="typewriter-container mb-4" data-aos="fade-down">
+        <h2 class="text-lg sm:text-xl md:text-2xl typewriter-text">
+          <span id="typewriter-text">I am an AI/ML Engineer</span>
+          <span class="cursor"></span>
+        </h2>
+      </div>
+      
+      <p class="text-lg sm:text-xl mb-8" data-aos="fade-up">
+        Turning data into action through analysis, engineering, and intelligence.
+      </p>
+      <div class="flex flex-wrap justify-center gap-6" data-aos="zoom-in">
+        <a href="https://linkedin.com/in/omkar-aurangabadkar/" target="_blank" class="flex items-center gap-2 text-lg font-semibold hover:text-indigo-300 transition-colors">
+          <!-- LinkedIn SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.838-1.563 3.036 0 3.6 2 3.6 4.594v5.602z"/>
+          </svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/omkaraurangabadkar" target="_blank" class="flex items-center gap-2 text-lg font-semibold hover:text-indigo-300 transition-colors">
+          <!-- GitHub SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.123-.304-.535-1.527.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.649.241 2.872.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.104.823 2.222v3.293c0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+          GitHub
+        </a>
+        <a href="mailto:omkaraurangabadkar13@gmail.com" class="flex items-center gap-2 text-lg font-semibold hover:text-indigo-300 transition-colors">
+          <!-- Email SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+            <path d="M12 13.065l-11.99-8.065h23.98l-11.99 8.065zm12-9.065v16c0 1.104-.896 2-2 2h-20c-1.104 0-2-.896-2-2v-16c0-1.104.896-2 2-2h20c1.104 0 2 .896 2 2zm-2 1.234l-10 6.729-10-6.729v14.766c0 .552.447 1 1 1h18c.553 0 1-.448 1-1v-14.766z"/>
+          </svg>
+          Email
+        </a>
+      </div>
+    </div>
+  </section>
+
+<!-- About Me -->
+<section id="about" class="scroll-mt-20 py-16 sm:py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-6" data-aos="fade-up">
+    <h3 class="text-3xl sm:text-4xl font-bold mb-6 text-indigo-700 text-center">About Me</h3>
+    <div class="text-lg text-gray-800 space-y-4">
+      <p>Hello! I'm <strong>Omkar Aurangabadkar</strong>, your friendly neighborhood data explorer. I have an MS in Applied Data Science from San Jose State University, but what really drives me is the thrill of uncovering hidden stories buried in mountains of data.</p>
+      <p>These days, I'm busy building machine learning pipelines, exploring the exciting world of Agentic AIs, and juggling LLMs all while crafting tools that turn messy data into clear, actionable insights. For me, data isn't just numbers it's a story waiting to be told in a way that actually makes a difference.</p>
+      <p>When I'm off the clock, you'll find me chasing the thrill of a good soccer match, smashing birdies in badminton, battling it out in table tennis, or pumping some iron at the gym. Sports and workouts keep me sharp and remind me that sometimes the best strategy is to just have fun.</p>
+      <p>At heart, I believe data connects people, solves puzzles, and sometimes even sparks a good laugh especially when your model throws a curveball just to keep things interesting.</p>
+      <p><strong>By the way, I'm currently looking for exciting new opportunities where I can bring my passion for data and creativity to the table. If you're hunting for someone who's equal parts data geek and team player, let's chat  <span class="text-indigo-700 font-extrabold">hire me!</span></strong></p>
+    </div>
+  </div>
+</section>
+
+  <!-- Projects -->
+  <section id="projects" class="scroll-mt-20 py-16 sm:py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl sm:text-4xl font-bold mb-12 text-indigo-700 text-center" data-aos="fade-up">
+        Featured Projects
+      </h3>
+      <div class="grid gap-8 md:grid-cols-2">
+        <div class="p-6 glass-card" data-aos="fade-right">
+          <h4 class="text-xl sm:text-2xl font-semibold text-indigo-600 mb-3">AI-Powered Mock Interviewer</h4>
+          <div class="flex gap-2 flex-wrap mb-2">
+            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">Prompt Engineering</span>
+            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">LLMs</span>
+            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">GenAI</span>
+          </div>
+          <p class="mb-4 text-base">Engineered a data ingestion pipeline to scrape and normalize 10,000+ interview questions from platforms like Glassdoor and GeeksforGeeks using Groq API, Docker, and AWS Lambda, enabling large-scale training of domain-specific LLMs.</p>
+          <p class="mb-4 text-base">Built and deployed a voice-interactive AI interview platform using AssemblyAI for real-time transcription and Google TTS for speech synthesis, delivering real-time, personalized mock interviews via a NextJS frontend.</p>
+          <a href="https://github.com/Omkar998/AI-Powered-Mock-Interviewer" target="_blank" class="text-indigo-500 hover:underline font-medium">
+            View on GitHub
+          </a>
+        </div>
+        <div class="p-6 glass-card" data-aos="fade-left">
+          <h4 class="text-xl sm:text-2xl font-semibold text-indigo-600 mb-3">Wildfire Prediction in the USA</h4>
+          <div class="flex gap-2 flex-wrap mb-2">
+            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">PowerBI</span>
+            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">Data Mining</span>
+          </div>
+          <p class="mb-4 text-base">Demonstrated a Power BI dashboard that integrated data sources to enhance real-time wildfire risk visualization, overcoming accessibility challenges and improving disaster response efficiency by 15%.</p>
+          <p class="mb-4 text-base">Enhanced the wildfire risk dashboard's interactivity to overcome static data challenges, improving decision-making. Added slicers, mapped high-risk zones, and identified key factors, resulting in more vital insights and better risk assessment.</p>
+          <a href="https://github.com/Omkar998/Dashboard-for-Wildfire-in-California" target="_blank" class="text-indigo-500 hover:underline font-medium">
+            View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="scroll-mt-20 py-16 sm:py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl sm:text-4xl font-bold mb-12 text-indigo-700 text-center" data-aos="fade-up">
+        Experience
+      </h3>
+      <div class="space-y-8 text-base">
+        <div class="glass-card p-6" data-aos="fade-right">
+          <h4 class="text-xl font-semibold text-indigo-600 mb-2">Machine Learning Engineer Intern</h4>
+          <p class="text-gray-700"><strong>Taral AI</strong> — <em>Jun 2024 - Aug 2024</em></p>
+          <ul class="list-disc pl-5 mt-2">
+            <li>Developed an LLM-powered SaaS toolchain to automate unit test generation, reducing manual workload by 40% and showcasing LLM's reasoning capabilities through prompt-driven code comprehension.</li>
+            <li>Built and deployed scalable ML pipelines on Amazon SageMaker for data preprocessing and model training optimization, achieving 43% faster deployment cycles and enhancing data quality.</li>
+            <li>Integrated and maintained AI models (Claude AI, ChatGPT-4, Gemini 1.5 Pro) in production with 95% uptime, delivering robust evaluation documentation for scalable inference and benchmarking.</li>
+            <li>Led performance benchmarking of Claude AI, ChatGPT-4, and Gemini 1.5 Pro through prompt refinement strategies to enhance reasoning capabilities.</li>
+          </ul>
+        </div>
+        <div class="glass-card p-6" data-aos="fade-left">
+          <h4 class="text-xl font-semibold text-indigo-600 mb-2">Associate Data Analyst</h4>
+          <p class="text-gray-700"><strong>Persistent Systems</strong> — <em>Mar 2021 - Jul 2023</em></p>
+          <ul class="list-disc pl-5 mt-2">
+            <li>Executed complex SQL queries to clean, transform, and manage large-scale financial datasets, improving data accuracy by 48%.</li>
+            <li>Crafted custom Tableau dashboards to track financial metrics and investment performance, streamlining reporting workflows.</li>
+            <li>Collaborated with stakeholders to translate complex metrics into interactive dashboards using advanced SQL and ETL pipelines, enhancing strategic decision-making.</li>
+            <li>Enabled strategic financial planning by integrating trend analysis and KPI monitoring, resulting in a 52% boost in data accuracy.</li>
+            <li>Applied Agile methodologies to iterate on client requirements, achieving a 90% customer satisfaction rate through adaptive financial solutions.</li>
+          </ul>
+        </div>
+        <div class="glass-card p-6" data-aos="fade-right">
+          <h4 class="text-xl font-semibold text-indigo-600 mb-2">Data Science Intern</h4>
+          <p class="text-gray-700"><strong>LinkCode Technologies</strong> — <em>Mar 2019 - Oct 2020</em></p>
+          <ul class="list-disc pl-5 mt-2">
+            <li>Used Python, Pandas, and machine learning algorithms to clean and analyze large datasets, improving customer segmentation accuracy by 59%.</li>
+            <li>Applied business intelligence techniques to enhance operational efficiency and data-driven decision-making.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="scroll-mt-20 py-16 sm:py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl sm:text-4xl font-bold mb-12 text-indigo-700 text-center" data-aos="fade-up">
+        Skills
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-base" data-aos="fade-up">
+        <div class="glass-card p-6"><strong>Analysis & Visualization Tools:</strong> Tableau, Power BI, Excel (VLOOKUP, Pivot Tables, VBA), Looker, Alteryx</div>
+        <div class="glass-card p-6"><strong>Programming Languages:</strong> R, Advanced SQL, Python, Java, Linux Shell, C#, C++</div>
+        <div class="glass-card p-6"><strong>Database Management Systems:</strong> MySQL, Oracle, MongoDB, CouchDB, AWS DynamoDB, AWS Redshift, Google BigQuery, NoSQL, Spark, Kafka, Kubernetes, Docker, Hadoop</div>
+        <div class="glass-card p-6"><strong>Data Skills:</strong> ETL Pipelining, Data Modeling, Data Presentation, Data Warehousing, Statistics, Apache Airflow</div>
+        <div class="glass-card p-6"><strong>Data Science:</strong> Predictive Modeling, A/B Testing, Causal Inference, Bayesian Methods</div>
+        <div class="glass-card p-6"><strong>Cloud Technologies/Data Warehouse:</strong> AWS, Google Cloud Platform (GCP), Azure, Snowflake</div>
+        <div class="glass-card p-6"><strong>Tools/Services:</strong> Git, REST API, RESTful Services, JSON, DevOps, Postman, Slack, PyCharm, JIRA</div>
+        <div class="glass-card p-6"><strong>Other Skills:</strong> Strong Analytical Skills, Problem-Solving, Collaboration, Business Communication</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="scroll-mt-20 py-16 sm:py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl sm:text-4xl font-bold mb-12 text-indigo-700 text-center" data-aos="fade-up">
+        Education
+      </h3>
+      <ul class="space-y-6 text-base text-center" data-aos="fade-up">
+        <li class="glass-card p-6 max-w-2xl mx-auto">
+          <strong class="text-indigo-600">San Jose State University</strong> — <em>MS in Applied Data Science</em> (Aug 2023 – May 2025)<br>
+          <span class="text-gray-700">Coursework: Machine Learning, Big Data, Database Systems, Data Visualization, Deep Learning</span>
+        </li>
+        <li class="glass-card p-6 max-w-2xl mx-auto">
+          <strong class="text-indigo-600">University of Pune</strong> — <em>BE in Information Technology</em> (May 2016 – Apr 2020)<br>
+          <span class="text-gray-700">Coursework: Machine Learning, Database Management, Cloud Computing, Computer Organization</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-700 text-white text-center py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="font-medium">&copy; 2025 Omkar Aurangabadkar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out',
+      once: true
+    });
+
+    // Typewriter Animation
+    const roles = [
+      "I am an AI/ML Engineer",
+      "I am a Data Analyst", 
+      "I am a Data Scientist",
+      "I am a Software Developer"
+    ];
+    
+    let currentRoleIndex = 0;
+    let currentCharIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 100;
+    
+    function typeWriter() {
+      const textElement = document.getElementById('typewriter-text');
+      const currentRole = roles[currentRoleIndex];
+      
+      if (isDeleting) {
+        textElement.textContent = currentRole.substring(0, currentCharIndex - 1);
+        currentCharIndex--;
+        typeSpeed = 50;
+      } else {
+        textElement.textContent = currentRole.substring(0, currentCharIndex + 1);
+        currentCharIndex++;
+        typeSpeed = 100;
+      }
+      
+      if (!isDeleting && currentCharIndex === currentRole.length) {
+        typeSpeed = 2000; // Pause at end
+        isDeleting = true;
+      } else if (isDeleting && currentCharIndex === 0) {
+        isDeleting = false;
+        currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+        typeSpeed = 500; // Pause before starting new word
+      }
+      
+      setTimeout(typeWriter, typeSpeed);
+    }
+    
+    // Start typewriter effect after page loads
+    window.addEventListener('load', () => {
+      setTimeout(typeWriter, 1000);
+    });
+
+    // Optional: Highlight active nav link on scroll
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-link");
+      function onScroll() {
+        let scrollPos = window.scrollY + 100;
+        sections.forEach(section => {
+          if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+            navLinks.forEach(link => {
+              link.classList.remove("active");
+              if (link.getAttribute("href") === "#" + section.id) {
+                link.classList.add("active");
+              }
+            });
+          }
+        });
+      }
+      window.addEventListener("scroll", onScroll);
+    });
+  </script>
+</body>
+</html>
